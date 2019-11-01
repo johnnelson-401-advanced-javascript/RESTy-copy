@@ -5,16 +5,16 @@ const Input = ({ updateMethod, submit }) => {
 
   return (
     <form>
-      <input type='text' name='url'></input>
+      <input type='text' name='url'/>
       <label>
-        <input name='method' type="radio" value='get' onClick={() => updateMethod}>Get</input>
-        <input name='method' type="radio" value='post' onClick={() => updateMethod}>Post</input>
-        <input name='method' type="radio" value='put' onClick={() => updateMethod}>Put</input>
-        <input name='method' type="radio" value='patch' onClick={() => updateMethod}>Patch</input>
-        <input name='method' type="radio" value='delete' onClick={() => updateMethod}>Delete</input>
+        <input name='method' type="radio" value='get' onClick={() => updateMethod('get')}/>
+        <input name='method' type="radio" value='post' onClick={() => updateMethod('post')}/>
+        <input name='method' type="radio" value='put' onClick={() => updateMethod('put')}/>
+        <input name='method' type="radio" value='patch' onClick={() => updateMethod('patch')}/>
+        <input name='method' type="radio" value='delete' onClick={() => updateMethod('delete')}/>
       </label>
       <button type="submit" onSubmit={submit}>Go</button>
-      <input type='text' name='json'></input>
+      <input type='text' name='json'/>
     </form>
      
   );

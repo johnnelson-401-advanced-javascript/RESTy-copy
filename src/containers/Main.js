@@ -4,7 +4,7 @@ import Input from '../components/Inputs';
 export default class Main extends Component {
   state = {
     url: '',
-    method: '',
+    method: 'get',
     json: '',
   }
 
@@ -14,22 +14,19 @@ export default class Main extends Component {
 
   updateMethod = (method) => {
     this.setState({ method: method });
-    console.log(this.state.method);
-    
   }
   updateJSON = (json) => {
-    this.setState(json);
+    this.setState({ json });
   }
   updateURL = (url) => {
-    this.setState(url);
+    this.setState({ url });
   }
 
-  handleSubmit = () => {
-    this.preventDefault();
-    this.updateMethod();
-    this.updateURL();
-    this.updateJSON();
-    this.callAPI();
+  submit = (event, state) => {
+    event.preventDefault();
+    state = this.state;
+
+    this.callAPI(state.url, state.method, state.json);
   }
 
   render() {
@@ -38,13 +35,15 @@ export default class Main extends Component {
       <>
         <Input
           updateMethod={this.updateMethod}
-          submit={this.handleSubmit}
-
+          submit={this.submit}
+          updateURL={this.updateURL}
+          updateJSON={this.updateJSON}
         />
       </>
     );
   }
 }
+
 
 
 

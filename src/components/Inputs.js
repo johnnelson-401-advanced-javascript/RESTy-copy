@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Input = ({ updateMethod, submit }) => {
+const Input = ({ updateMethod, submit, updateURL, updateJSON }) => {
 
   return (
-    <form>
-      <input type='text' name='url'/>
+    <form onSubmit={submit}>
+      <input type='text' name='url' onChange={({ target }) => updateURL(target.value)}/>
       <label>
         <input name='method' type="radio" value='get' onClick={() => updateMethod('get')}/>
         <input name='method' type="radio" value='post' onClick={() => updateMethod('post')}/>
@@ -13,8 +13,8 @@ const Input = ({ updateMethod, submit }) => {
         <input name='method' type="radio" value='patch' onClick={() => updateMethod('patch')}/>
         <input name='method' type="radio" value='delete' onClick={() => updateMethod('delete')}/>
       </label>
-      <button type="submit" onSubmit={submit}>Go</button>
-      <input type='text' name='json'/>
+      <button type="submit">Go</button>
+      <input type='text' name='json' onChange={({ target }) => updateJSON(target.value)}/>
     </form>
      
   );
@@ -22,7 +22,9 @@ const Input = ({ updateMethod, submit }) => {
 
 Input.propTypes = {
   submit: PropTypes.func.isRequired,
-  updateMethod: PropTypes.func.isRequired
+  updateMethod: PropTypes.func.isRequired,
+  updateURL: PropTypes.func.isRequired,
+  updateJSON: PropTypes.func.isRequired
 };
 
 export default Input;

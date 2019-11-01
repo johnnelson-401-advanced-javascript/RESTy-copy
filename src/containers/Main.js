@@ -1,25 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 export default class ButtonBar extends Component {
   state = {
-    method: "get",
-    response: "",
-    history: [["method", "url"]]
+    url: '',
+    method: 'get',
+    response: '',
+    history: [['method', 'url']]
   }
 
-selectMethod(method) {
-  this.setState({ method })
-}
+  selectMethod(method) {
+    this.setState({ method });
+  }
 
   render() {
     const { method } = this.state;
-    const buttons = [{}]
+    const buttons = [{}];
     return {
-
-    }
+        
+    };
   }
-};
+}
 
-ButtonBar.propTypes = {
-  ButtonBar: PropTypes.array.isRequired
-};

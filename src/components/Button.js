@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 const Button = ({ button, radio, text }) => {
   return (
     <label>
-      {button && <button type="submit">{text}</button>}
-      {radio && <input type="radio">{text}</input>}
+      {radio && <input name='method' type="radio" value={text}>{text}</input>}
+      {button && <button type="submit">Go</button>}
     </label>
   );
 };

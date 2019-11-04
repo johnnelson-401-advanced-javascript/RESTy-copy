@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import Input from '../components/Inputs';
+import callAPI from '../services/Api';
 
 export default class Main extends Component {
   state = {
     url: '',
     method: 'get',
     json: '',
-  }
-
-  callAPI = (state) => {
-    console.log(state);
   }
 
   updateMethod = (method) => {
@@ -26,7 +23,10 @@ export default class Main extends Component {
     event.preventDefault();
     state = this.state;
 
-    this.callAPI(state.url, state.method, state.json);
+    return callAPI(state.url, state.method, state.json)
+      .then(res => {
+        console.log(state);
+      });
   }
 
   render() {

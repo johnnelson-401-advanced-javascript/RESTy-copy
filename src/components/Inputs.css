@@ -1,0 +1,15 @@
+.Inputs {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  label {
+   
+    input {
+      visibility: hidden;
+    
+    }
+    label:hover {
+      background-color: aquamarine;
+    }
+  }
+}

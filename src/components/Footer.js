@@ -1,8 +1,9 @@
 import React from 'react';
+import style from './Footer.css'
 
 export default function Footer() {
   return (
-    <footer> &copy Maeve & John </footer>
+    <footer className={style.Footer}> Maeve & John </footer>
   );
 }
 

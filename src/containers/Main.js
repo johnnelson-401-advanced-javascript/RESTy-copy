@@ -27,7 +27,7 @@ export default class Main extends Component {
 
     // state = this.state;
     return callAPI(this.state.url, this.state.method, this.state.json)
-      .then(res => this.setState(state => {
+      .then(res => this.setState(() => {
         return {
           callResponse: JSON.stringify(res, null, '\t'),
           // history: state.history.concat({

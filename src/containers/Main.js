@@ -25,7 +25,7 @@ export default class Main extends Component {
 
     return callAPI(state.url, state.method, state.json)
       .then(res => {
-        console.log(state);
+        console.log(res);
       });
   }
 

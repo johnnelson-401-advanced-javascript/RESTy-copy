@@ -24,6 +24,7 @@ export default class Main extends Component {
 
   submit = (event) => {
     event.preventDefault();
+
     // state = this.state;
     return callAPI(this.state.url, this.state.method, this.state.json)
       .then(res => this.setState(state => {

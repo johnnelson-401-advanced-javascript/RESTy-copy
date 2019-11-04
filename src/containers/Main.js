@@ -25,6 +25,7 @@ export default class Main extends Component {
 
     return callAPI(state.url, state.method, state.json)
       .then(res => {
+        // eslint-disable-next-line
         console.log(res);
       });
   }

@@ -32,11 +32,11 @@ export default class Main extends Component {
     return callAPI(this.state.url, this.state.method, this.state.json)
       .then(res => this.setState(() => {
         return {
-          callResponse: JSON.stringify(res, null, '\t'),
-          history: {
+          callResponse: JSON.stringify(res, null, 2),
+          history: [...this.state.history, {
             method: this.state.method,
             url: this.state.url
-          }
+          }]
         };
       }));
   };

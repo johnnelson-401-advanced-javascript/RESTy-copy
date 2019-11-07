@@ -3,7 +3,7 @@ import style from './Footer.css';
 
 export default function Footer() {
   return (
-    <footer className={style.Footer}> Maeve & John </footer>
+    <footer className={style.Footer}> &copy; Maeve & John </footer>
   );
 }
 

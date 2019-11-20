@@ -13,6 +13,11 @@
     }
     label:hover {
       background-color: aquamarine;
+
+    }
+    input[type="radio"]:checked+label {
+      border: 1px solid darkblue;
+      background-color: aquamarine;
     }
   }
 }

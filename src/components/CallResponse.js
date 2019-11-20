@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 const CallResponse = ({ data }) => {
   return (
-    <div>
+    <pre>
       {data}
-    </div>
+    </pre>
   );
 };
 

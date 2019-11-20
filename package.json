@@ -23,7 +23,7 @@
     "build": "webpack -p --devtool source-map"
   },
   "keywords": [],
-  "author": "Maeve Griffin",
+  "author": "John Nelson",
   "license": "ISC",
   "dependencies": {
     "dotenv-webpack": "^1.7.0",

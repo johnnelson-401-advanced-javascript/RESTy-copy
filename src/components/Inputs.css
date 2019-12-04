@@ -1,0 +1,23 @@
+.Inputs {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+  margin-top: 1em;
+  label {
+   
+    input {
+      visibility: hidden;
+    
+    }
+    label:hover {
+      background-color: aquamarine;
+
+    }
+    input[type="radio"]:checked+label {
+      border: 1px solid darkblue;
+      background-color: aquamarine;
+    }
+  }
+}

@@ -8,9 +8,9 @@ const HistoryList = ({ history }) => {
     return <HistoryItem key={i} {...item} />;
   });
   return (
-    <div>
+    <pre>
       {elements}
-    </div>
+    </pre>
   );
 };
 HistoryList.propTypes = {
